@@ -3,8 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/bd_degrade_button.xml" value="0.126" />
         <entry key="app/src/main/res/drawable/container.xml" value="0.126" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.12" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
       </map>
     </option>
   </component>

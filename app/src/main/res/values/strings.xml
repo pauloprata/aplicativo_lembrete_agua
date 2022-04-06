@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">Beber Água - Lembrete</string>
+
+    <string name="hint_peso">Seu Peso (Kg)</string>
+    <string name="hint_idade">Sua Idade</string>
+    <string name="text_button_calcular">Calcular INgestão diaria</string>
 </resources>

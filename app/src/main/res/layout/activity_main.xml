@@ -21,18 +21,69 @@
        android:layout_height="80dp"
        android:layout_marginTop="20dp"
        android:layout_marginStart="20dp"
-      android:src="@drawable/bebaagua"
-      app:layout_constraintTop_toTopOf="@id/container_header"
-      app:layout_constraintStart_toStartOf="parent"/>
+       android:src="@drawable/bebaagua"
+       app:layout_constraintTop_toTopOf="@id/container_header"
+       app:layout_constraintStart_toStartOf="parent"/>
+
 
    <ImageView
+       android:id="@+id/refresh"
        android:layout_width="60dp"
        android:layout_height="40dp"
-      android:src="@drawable/ic_refresh_24"
-      android:layout_marginTop="30dp"
-      android:layout_marginEnd="30dp"
-      app:layout_constraintTop_toTopOf="@id/container_header"
+       android:src="@drawable/ic_refresh_24"
+       android:layout_marginTop="30dp"
+       android:layout_marginEnd="30dp"
+       app:layout_constraintTop_toTopOf="@id/container_header"
+       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintLeft_toLeftOf="@id/container_header"/>
+
+   <EditText
+       android:id="@+id/edit_peso"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:hint="@string/hint_peso"
+       android:textColorHint="@android:color/holo_blue_dark"
+       android:padding="15dp"
+       android:textColor="@android:color/holo_blue_dark"
+       android:textSize="18sp"
+       android:textStyle="bold"
+       android:inputType="numberDecimal"
+       android:maxLength="7"
+       android:layout_marginStart="20dp"
+       app:layout_constraintTop_toBottomOf="@id/container_header"
+       app:layout_constraintStart_toStartOf="parent"/>
+   <EditText
+       android:id="@+id/edit_idade"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:hint="@string/hint_idade"
+       android:textColorHint="@android:color/holo_blue_dark"
+       android:padding="15dp"
+       android:textColor="@android:color/holo_blue_dark"
+       android:textSize="18sp"
+       android:textStyle="bold"
+       android:inputType="number"
+       android:maxLength="3"
+       android:layout_marginStart="20dp"
+       app:layout_constraintTop_toBottomOf="@id/container_header"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toEndOf="@id/edit_peso"/>
+
+      <androidx.appcompat.widget.AppCompatButton
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+         android:text="@string/text_button_calcular"
+         android:textSize="18sp"
+         android:textStyle="bold"
+         android:textColor="@android:color/white"
+         android:layout_margin="20dp"
+          android:padding="15dp"
+         app:layout_constraintTop_toBottomOf="@id/edit_idade"
+          android:background="@drawable/bd_degrade_button"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintEnd_toEndOf="parent"/>
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
