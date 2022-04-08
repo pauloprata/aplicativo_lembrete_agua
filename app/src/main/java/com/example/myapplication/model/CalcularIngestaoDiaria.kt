@@ -27,6 +27,8 @@ class CalcularIngestaoDiaria {
         }
     }
 
-
+ fun resultadoTotalMl(): Double{
+     return resultadoTotalMl()
+ }
 
 }
