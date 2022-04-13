@@ -4,10 +4,7 @@ import android.annotation.SuppressLint
 import android.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
-import android.widget.ImageView
-import android.widget.Toast
+import android.widget.*
 import com.example.myapplication.model.CalcularIngestaoDiaria
 import java.text.NumberFormat
 import java.util.*
@@ -17,7 +14,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var edit_peso: EditText
     private lateinit var edit_idade: EditText
     private lateinit var btn_calcular: Button
-    private lateinit var txt_resultado_ml: EditText
+    private lateinit var txt_resultado_ml: TextView
     private lateinit var refresh_result: ImageView
 
     private lateinit var calcularIngestaoDiaria: CalcularIngestaoDiaria
@@ -45,7 +42,7 @@ class MainActivity : AppCompatActivity() {
            resultadoMl = calcularIngestaoDiaria.ResultadoMl()
            val formatar = NumberFormat.getInstance(Locale("pt","BR"))
            formatar.isGroupingUsed = false
-           txt_resultado_ml.setText( formatar.format(resultadoMl) + " " + " ml ")
+           txt_resultado_ml.text = formatar.format(resultadoMl) + " " + "ml"
        }
   }
         refresh_result.setOnClickListener {
@@ -55,7 +52,7 @@ class MainActivity : AppCompatActivity() {
                 .setPositiveButton("Ok") { dialogInterface, i ->
                     edit_peso.setText("")
                     edit_idade.setText("")
-                    txt_resultado_ml.setText("")
+                    txt_resultado_ml.text = " "
                 }
             alertDialog.setNegativeButton("Cancelar") { dialogInterface, i ->
 
