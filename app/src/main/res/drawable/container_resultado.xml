@@ -15,7 +15,7 @@
 <item
     android:bottom="10dp"
     android:left="10dp"
-    android:right="10dp"
+    android:right="19dp"
     android:top="10dp">
 
     <shape android:shape="oval">
