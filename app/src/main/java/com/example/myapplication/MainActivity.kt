@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var txt_resultado_ml: TextView
     private lateinit var refresh_result: ImageView
     private lateinit var btn_lembrete : Button
-    private lateinit var btn_alarme : Button
+    private lateinit var bt_alarme : Button
     private lateinit var txt_hora: TextView
     private lateinit var txt_minutos: TextView
 
@@ -85,8 +85,8 @@ class MainActivity : AppCompatActivity() {
              timePickerDialog.show()
         }
 
-         btn_alarme.setOnClickListener {
-             if (!txt_hora.text.toString().isEmpty() && txt_minutos.text.toString().isEmpty()){
+         bt_alarme.setOnClickListener {
+             if (!txt_hora.text.toString().isEmpty() && !txt_minutos.text.toString().isEmpty()){
                  val intent = Intent(AlarmClock.ACTION_SET_ALARM)
                  intent.putExtra(AlarmClock.EXTRA_HOUR, txt_hora.text.toString().toInt())
                  intent.putExtra(AlarmClock.EXTRA_MINUTES, txt_minutos.text.toString().toInt())
@@ -106,7 +106,7 @@ class MainActivity : AppCompatActivity() {
         txt_resultado_ml = findViewById(R.id.txt_resultado_ml)
         refresh_result = findViewById(R.id.refresh_result)
         btn_lembrete = findViewById(R.id.definir_lembrete)
-        btn_alarme = findViewById(R.id.bt_alarme)
+        bt_alarme = findViewById(R.id.bt_alarme)
         txt_hora = findViewById(R.id.id_horas)
         txt_minutos = findViewById(R.id.id_minutos)
     }
